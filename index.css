@@ -1,0 +1,134 @@
+/* تنسيق الصفحة كاملة بالوضع الداكن */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #0d0d11; /* خلفية داكنة جداً وأنيقة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* تنسيق الحاوية الرئيسية */
+.contanier {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    background: #1e1e24; /* رمادي داكن متباين مع الخلفية */
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 
+                0 0 1px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    direction: rtl; /* دعم الاتجاه العربي */
+    box-sizing: border-box;
+}
+
+/* تنسيق مشترك لحقول الإدخال والقائمة المنسدلة */
+.contanier input, 
+.contanier select {
+    width: 100%;
+    padding: 14px 18px;
+    background-color: #2a2a32; /* لون الحقول الداخلي */
+    border: 2px solid transparent; 
+    border-radius: 10px;
+    color: #ffffff; /* لون النص أبيض */
+    font-size: 17px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+/* تنسيق نصوص التلميح داخل الحقول (Placeholder) */
+.contanier input::placeholder {
+    color: #a0a0aa;
+    opacity: 0.8;
+}
+
+/* تأثير احترافي عند الضغط والتركيز على الحقول */
+.contanier input:focus, 
+.contanier select:focus {
+    outline: none;
+    background-color: #2d2d38;
+    border-color: #00ffaa; /* حواف مضيئة بلون النيون */
+    box-shadow: 0 0 12px rgba(0, 255, 170, 0.2);
+}
+
+/* تنسيق زر الحساب بتصميم نيون متدرج */
+button{
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #00ffaa 0%, #00bcff 100%);
+    color: #0d0d11; /* لون نص داكن ليتناسب مع الخلفية المضيئة */
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 255, 170, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* تأثير تمرير الفأرة فوق الزر */
+button:hover {
+    opacity: 0.95;
+    box-shadow: 0 6px 20px rgba(0, 255, 170, 0.5);
+    transform: translateY(-1px);
+}
+
+/* تأثير الضغط على الزر */
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(0, 255, 170, 0.3);
+}
+
+/* تخصيص أيقونة السهم في القائمة المنسدلة لتناسب التصميم الداكن */
+.contanier select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: left 15px center; /* السهم على اليسار لأن الاتجاه RTL */
+    background-size: 18px;
+}
+h3{
+    text-align: center;
+    margin: 3px;
+    font-size: 18px;
+    font-weight: 700;
+    color: red;
+}
+select{
+    cursor: pointer;
+}
+.spans,#clearresult{
+    display: none;
+}
+span {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 10px 16px;
+    margin: 8px auto;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  
+  span:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+  }
+small{
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 17px;
+}

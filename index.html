@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Calorie Inspector</title>
+</head>
+<body>
+    <div class="contanier">
+        <small id="small"></small>
+        <input type="number" id="inp1" placeholder="Enter your weight" min="0">
+        <input type="number" id="inp2" placeholder="Enter your height" min="0">
+        <input type="number" id="inp3" placeholder="Enter your age" min="0">
+        <select id="select2">
+            <option value="none" hidden disabled selected>Please select your gender</option>
+            <option value="man">male</option>
+            <option value="girl">female</option>
+        </select>
+        <select id="select1">
+            <option value="none1" hidden disabled selected>Weekly level of physical activity</option>
+            <option value="1.2">Inactive / Slow</option>
+            <option value="1.375">Mild activity</option>
+            <option value="1.55">Moderate activity</option>
+            <option value="1.725">high activity</option>
+        </select>
+        <button id="btn">Calculate macros and calories</button>
+        <h3 id="h3"></h3>
+        <div class="spans">
+            <span id="span1"></span>
+            <span id="span2"></span>
+        </div>
+        <button id="clearresult">Clear Result</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
